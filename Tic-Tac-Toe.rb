@@ -1,4 +1,11 @@
+#Created by Sankalp Chauhan (@sankalpchauhan-me) on 16/06/2018 for The Web Developer Bootcamp of The Flatrion School
+#Thanks to the team of Flatrion School
+
+
+
+
 class TicTacToe
+# WIN_COMBINATIONS constant
   WIN_COMBINATIONS = [
   [0,1,2],
   [3,4,5],
@@ -22,6 +29,7 @@ class TicTacToe
     @board.count{|token| token == "X" || token == "O"}
   end
 
+#Defines a board
   def display_board
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
     puts "-----------"
@@ -30,11 +38,13 @@ class TicTacToe
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
 
+# Changes input_to_index
   def input_to_index(str)
   num = str.to_i
   num-1
   end
 
+#Moves a player
   def move(index, value)
     @board[index] = value
   end
